@@ -10,7 +10,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.HashMap;
 import javax.imageio.ImageIO;
 import javax.swing.Icon;
@@ -37,7 +36,7 @@ import org.terifan.util.log.Log;
 public class Sample
 {
 	private static HashMap<String,BufferedImage> mImages = new HashMap<>();
-	private final static String colorScheme = "silver";
+	private final static String colorScheme = "gray";
 
 
 	public Sample() throws IOException
@@ -365,6 +364,7 @@ public class Sample
 			switch (colorScheme)
 			{
 				case "black":
+				case "gray":
 					mPaint0 = new GradientPaint(0f, y0, new Color(78,78,78), 0f, y1, new Color(70,70,70));
 					mPaint1 = new GradientPaint(0f, y1, new Color(70,70,70), 0f, y2, new Color(56,56,56));
 					mPaint2 = new GradientPaint(0f, y2, new Color(56,56,56), 0f, y3, new Color(0,0,0));
