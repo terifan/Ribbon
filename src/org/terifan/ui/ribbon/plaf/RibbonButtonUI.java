@@ -81,8 +81,6 @@ public class RibbonButtonUI extends BasicButtonUI
 	{
 		AbstractButton button = (AbstractButton)aComponent;
 		ButtonModel model = button.getModel();
-		String text = button.getText();
-		Icon icon = button.getIcon();
 
 		if (model.isArmed())
 		{
@@ -97,8 +95,21 @@ public class RibbonButtonUI extends BasicButtonUI
 			RibbonUtils.drawScaledImage(graphics, RibbonUtils.load("large_button/hover.png", true), 0, 0, width, height, 5, 5);
 		}
 
-		icon.paintIcon(aComponent, graphics, (width - icon.getIconWidth()) / 2, 4 + 32 - icon.getIconHeight());
+		Icon icon = null;
+		if (!model.isEnabled())
+		{
+			icon = button.getDisabledIcon();
+		}
+		if (model.isEnabled() || icon == null)
+		{
+			icon = button.getIcon();
+		}
+		if (icon != null)
+		{
+			icon.paintIcon(aComponent, graphics, (width - icon.getIconWidth()) / 2, 4 + 32 - icon.getIconHeight());
+		}
 
+		String text = button.getText();
 		if (text.length() > 0)
 		{
 			Font font = aComponent.getFont();
