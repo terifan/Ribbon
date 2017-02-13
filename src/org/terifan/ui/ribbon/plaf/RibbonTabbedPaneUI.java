@@ -25,7 +25,6 @@ public class RibbonTabbedPaneUI extends TabbedPaneUI
 {
 	private final static FontRenderContext FRC = new FontRenderContext(null, true, false);
 	private int mHoverIndex = -1;
-//	private boolean mMouseDragged;
 	protected JTabbedPane mTabbedPane;
 	private Overlay mOverlay;
 
@@ -60,7 +59,6 @@ public class RibbonTabbedPaneUI extends TabbedPaneUI
 			@Override
 			public void mouseReleased(MouseEvent aEvent)
 			{
-//				mMouseDragged = false;
 				tabbedPane.repaint();
 
 				int index = tabForCoordinate(tabbedPane, aEvent.getX(), aEvent.getY());
@@ -118,7 +116,6 @@ public class RibbonTabbedPaneUI extends TabbedPaneUI
 			@Override
 			public void mouseDragged(MouseEvent aEvent)
 			{
-//				mMouseDragged = true;
 				int index = tabForCoordinate(tabbedPane, aEvent.getX(), aEvent.getY());
 				if (mHoverIndex != index)
 				{
@@ -158,14 +155,7 @@ public class RibbonTabbedPaneUI extends TabbedPaneUI
 
 			if (i == tabbedPane.getSelectedIndex() && (i == mHoverIndex))// || mMouseDragged))
 			{
-//				if (mMouseDragged)
-//				{
-//					tabImage = RibbonUtils.load("tabbedpane/selected.png");
-//				}
-//				else
-//				{
-					tabImage = RibbonUtils.load("tabbedpane/hover_selected.png");
-//				}
+				tabImage = RibbonUtils.load("tabbedpane/hover_selected.png");
 				graphics.setColor(RibbonUtils.getColor("tabselectedtextcolor"));
 			}
 			else if (i == mHoverIndex)
