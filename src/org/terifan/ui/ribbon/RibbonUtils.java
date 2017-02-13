@@ -145,7 +145,7 @@ public class RibbonUtils
 			}
 			catch (IOException e)
 			{
-				throw new RuntimeException(e);
+				throw new IllegalStateException(e);
 			}
 
 			mCache.put(aPath, image);
