@@ -18,6 +18,7 @@ import javax.swing.JComponent;
 import javax.swing.LookAndFeel;
 import javax.swing.plaf.basic.BasicButtonUI;
 import org.terifan.ui.ribbon.RibbonButtonGroup;
+import org.terifan.ui.ribbon.RibbonToggleButton;
 import org.terifan.ui.ribbon.RibbonUtils;
 import org.terifan.util.log.Log;
 
@@ -88,7 +89,14 @@ public class RibbonButtonUI extends BasicButtonUI
 		}
 		else if (model.isSelected())
 		{
-			RibbonUtils.drawScaledImage(graphics, RibbonUtils.load("large_button/selected.png", true), 0, 0, width, height, 5, 5);
+			if (aComponent instanceof RibbonToggleButton)
+			{
+				RibbonUtils.drawScaledImage(graphics, RibbonUtils.load("toggle_button/selected.png", true), 0, 0, width, height, 5, 5);
+			}
+			else
+			{
+				RibbonUtils.drawScaledImage(graphics, RibbonUtils.load("large_button/selected.png", true), 0, 0, width, height, 5, 5);
+			}
 		}
 		else if (model.isRollover())
 		{
@@ -139,7 +147,14 @@ public class RibbonButtonUI extends BasicButtonUI
 		}
 		else if (model.isSelected())
 		{
-			RibbonUtils.drawScaledImage(graphics, RibbonUtils.load("button/selected.png", true), 0, 0, width, height, 5, 5);
+			if (aComponent instanceof RibbonToggleButton)
+			{
+				RibbonUtils.drawScaledImage(graphics, RibbonUtils.load("toggle_button/selected.png", true), 0, 0, width, height, 5, 5);
+			}
+			else
+			{
+				RibbonUtils.drawScaledImage(graphics, RibbonUtils.load("button/selected.png", true), 0, 0, width, height, 5, 5);
+			}
 		}
 		else if (model.isRollover())
 		{

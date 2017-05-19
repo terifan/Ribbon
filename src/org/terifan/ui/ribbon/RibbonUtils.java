@@ -37,6 +37,7 @@ public class RibbonUtils
 		colorScheme.put("labelcolor", new Color(21, 66, 139));
 		colorScheme.put("tabselectedtextcolor", new Color(21, 66, 139));
 		colorScheme.put("tabtextcolor", new Color(21, 66, 139));
+		colorScheme.put("gallerybordercolor", new Color(198,202,206));
 		mColorSchemes.put("blue", colorScheme);
 
 		colorScheme = new HashMap<>();
@@ -51,6 +52,7 @@ public class RibbonUtils
 		colorScheme.put("labelcolor", new Color(200, 200, 200));
 		colorScheme.put("tabselectedtextcolor", new Color(220, 220, 220));
 		colorScheme.put("tabtextcolor", new Color(200, 200, 200));
+		colorScheme.put("gallerybordercolor", new Color(198,202,206));
 		mColorSchemes.put("black", colorScheme);
 
 		colorScheme = new HashMap<>();
@@ -66,6 +68,7 @@ public class RibbonUtils
 		colorScheme.put("labelcolor", new Color(200, 200, 200));
 		colorScheme.put("tabselectedtextcolor", new Color(220, 220, 220));
 		colorScheme.put("tabtextcolor", new Color(200, 200, 200));
+		colorScheme.put("gallerybordercolor", new Color(198,202,206));
 		mColorSchemes.put("gray", colorScheme);
 
 		colorScheme = new HashMap<>();
@@ -80,6 +83,7 @@ public class RibbonUtils
 		colorScheme.put("labelcolor", new Color(70, 70, 70));
 		colorScheme.put("tabselectedtextcolor", new Color(76, 83, 92));
 		colorScheme.put("tabtextcolor", new Color(76, 83, 92));
+		colorScheme.put("gallerybordercolor", new Color(198,202,206));
 		mColorSchemes.put("silver", colorScheme);
 
 		setColorScheme("blue");
@@ -138,7 +142,7 @@ public class RibbonUtils
 
 				if (url == null)
 				{
-					throw new IllegalArgumentException("Resource not found: color: " + mColorScheme+", path: " + aPath);
+					throw new IllegalArgumentException("Resource not found: color: " + mColorScheme+", path: " + aPath + ", computed: " + "resources/" + aPath.replace(".png","") + "__default.png");
 				}
 
 				image = ImageIO.read(url);
