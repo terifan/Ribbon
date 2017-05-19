@@ -22,6 +22,14 @@ public class RibbonCheckBox extends JCheckBox
 	}
 
 
+	public RibbonCheckBox(Action a, boolean aSelected)
+	{
+		super(a);
+		installDefaults();
+		setSelected(aSelected);
+	}
+
+
 	public RibbonCheckBox(String text)
 	{
 		super(text);

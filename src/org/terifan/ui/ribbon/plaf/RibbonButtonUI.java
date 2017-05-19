@@ -156,7 +156,7 @@ public class RibbonButtonUI extends BasicButtonUI
 			doTextColor(model, graphics, button);
 
 			graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
-			graphics.drawString(text, 3 + 16 + 3, height / 2 + 5);
+			graphics.drawString(text, 3 + (icon!=null?16:0) + 3, height / 2 + 5);
 		}
 	}
 
@@ -232,7 +232,7 @@ public class RibbonButtonUI extends BasicButtonUI
 			doTextColor(model, graphics, button);
 
 			graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
-			graphics.drawString(text, 3 + 16 + 3, height / 2 + 5);
+			graphics.drawString(text, 3 + (icon!=null?16:0) + 3, height / 2 + 5);
 		}
 
 		graphics.setTransform(transform);
@@ -264,7 +264,7 @@ public class RibbonButtonUI extends BasicButtonUI
 		else
 		{
 			int labelWidth = (int)aComponent.getFont().getStringBounds(text, FRC).getWidth();
-			return new Dimension(3 + 16 + 3 + labelWidth + 5, 22);
+			return new Dimension(3 + (icon!=null?16:0) + 3 + labelWidth + 5, 22);
 		}
 	}
 
@@ -288,7 +288,7 @@ public class RibbonButtonUI extends BasicButtonUI
 		String text0 = text.substring(0, offset).trim();
 		String text1 = text.substring(offset).trim();
 
-		if (text1.indexOf(" ") == -1)
+		if (!text1.contains(" "))
 		{
 			return new String[]
 			{

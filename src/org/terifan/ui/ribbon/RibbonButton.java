@@ -1,6 +1,7 @@
 package org.terifan.ui.ribbon;
 
 import javax.swing.Action;
+import javax.swing.ButtonGroup;
 import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.plaf.ComponentUI;
@@ -57,5 +58,19 @@ public class RibbonButton extends JButton
 		{
 			super.setUI(newUI);
 		}
+	}
+
+
+	public RibbonButton setGroup(ButtonGroup aButtonGroup)
+	{
+		aButtonGroup.add(this);
+		return this;
+	}
+
+
+	public RibbonButton setActionCommandEx(String aCtionCommand)
+	{
+		super.setActionCommand(aCtionCommand);
+		return this;
 	}
 }
