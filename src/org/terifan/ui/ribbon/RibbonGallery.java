@@ -43,6 +43,13 @@ public class RibbonGallery extends JPanel
 	}
 
 
+	public RibbonGallery setColumnCount(int aColumnCount)
+	{
+		mColumnCount = aColumnCount;
+		return this;
+	}
+
+
 	protected void installDefaults()
 	{
 		setOpaque(false);
