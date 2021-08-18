@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import javax.swing.JComponent;
 
-
+ 
 public interface Overlay
 {
 	public void setComponent(JComponent aComponent);
