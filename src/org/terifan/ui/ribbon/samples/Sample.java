@@ -30,7 +30,6 @@ import org.terifan.ui.ribbon.RibbonLabel;
 import org.terifan.ui.ribbon.RibbonTab;
 import org.terifan.ui.ribbon.RibbonToggleButton;
 import org.terifan.ui.ribbon.RibbonUtils;
-import org.terifan.util.log.Log;
 
 
 public class Sample
@@ -337,7 +336,7 @@ public class Sample
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace(Log.out);
+				e.printStackTrace(System.out);
 			}
 		}
 		return image;
@@ -421,7 +420,7 @@ public class Sample
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace(Log.out);
+			e.printStackTrace(System.out);
 		}
 	}
 }

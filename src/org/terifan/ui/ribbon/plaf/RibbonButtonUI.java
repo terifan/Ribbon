@@ -20,7 +20,6 @@ import javax.swing.plaf.basic.BasicButtonUI;
 import org.terifan.ui.ribbon.RibbonButtonGroup;
 import org.terifan.ui.ribbon.RibbonToggleButton;
 import org.terifan.ui.ribbon.RibbonUtils;
-import org.terifan.util.log.Log;
 
 
 public class RibbonButtonUI extends BasicButtonUI

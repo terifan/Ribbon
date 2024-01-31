@@ -10,7 +10,6 @@ import java.net.URL;
 import java.util.HashMap;
 import javax.imageio.ImageIO;
 import javax.swing.Icon;
-import org.terifan.util.log.Log;
 
 
 public class RibbonUtils
