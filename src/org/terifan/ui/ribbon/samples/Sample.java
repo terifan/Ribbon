@@ -7,7 +7,6 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
@@ -16,8 +15,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import org.terifan.io.Streams;
-import org.terifan.ui.Utilities;
+import javax.swing.text.Utilities;
 import org.terifan.ui.ribbon.Ribbon;
 import org.terifan.ui.ribbon.RibbonBox;
 import org.terifan.ui.ribbon.RibbonButton;
@@ -40,8 +38,6 @@ public class Sample
 
 	public Sample() throws IOException
 	{
-		Utilities.setSystemLookAndFeel();
-
 		RibbonBox ribbonBox;
 		RibbonButtonGroup ribbonButtonGroup;
 		RibbonGroup ribbonGroup;
